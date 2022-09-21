@@ -1,7 +1,8 @@
 .hero {
-
+  height: 100vh;
   @media (max-width: $breakpoint992) {
     padding: 15px 0;
+    height: auto;
   }
 
   // .hero__inner
@@ -26,9 +27,11 @@
     background-attachment: fixed;
     background-position: center;
 
+
     @media (max-width: $breakpoint992) {
       position: static;
       background: none;
+      height: auto;
     }
   }
 
