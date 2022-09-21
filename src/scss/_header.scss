@@ -11,6 +11,7 @@
   padding: 0 20px;
   background-color: rgb(44, 132, 210);
   box-shadow: rgb(0 0 0 / 0%) 0px 1px 3px;
+  z-index: 10;
 
   @media (max-width: $breakpoint992) {
     position: static;
@@ -31,6 +32,7 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  column-gap: 10px;
 
   @media (max-width: $breakpoint992) {
     display: grid;
