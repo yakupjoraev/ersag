@@ -87,3 +87,70 @@
     }
   }
 }
+
+.soapnuts {
+
+  // .soapnuts__footer
+
+  &__footer {
+    margin-top: 100px;
+  }
+
+  // .soapnuts__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .soapnuts__item
+
+  &__item {
+ 
+  }
+
+  // .soapnuts__item-img
+
+  &__item-img {
+    display: inline-block;
+    margin-bottom: 20px;
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+  }
+
+  // .soapnuts__item-desc
+
+  &__item-desc {
+    padding: 0 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 300;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    span {
+      color: rgb(12, 132, 210);
+    font-weight: 600;
+    }
+  }
+
+  // .soapnuts__item-desc--green
+
+  &__item-desc--green {
+    color: rgb(10, 209, 103);
+    font-weight: 600;
+  }
+}
