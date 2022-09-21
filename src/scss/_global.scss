@@ -34,3 +34,15 @@ body {
         opacity: 1;
     }
 }
+
+.title {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.23;
+  color: #2c84d2;
+
+  @media (max-width: $breakpoint480) {
+    font-size: 32px;
+  }
+}

@@ -101,6 +101,14 @@ body.locked {
   }
 }
 
+.title {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.23;
+  color: #2c84d2;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -308,6 +316,64 @@ body.locked {
   height: 540px;
 }
 
+.turkey-product {
+  position: relative;
+  padding: 45px 0;
+}
+
+.turkey-product::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 3px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #2c84d2;
+  opacity: 0.5;
+}
+
+.turkey-product__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.turkey-product__desc {
+  max-width: 547px;
+  width: 100%;
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #000000;
+}
+
+.turkey-product__desc span {
+  line-height: 14px;
+  font-weight: 600;
+  color: #0c84d2;
+}
+
+.turkey-product__video {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 560px;
+          flex: 0 1 560px;
+}
+
+.turkey-product__video-iframe {
+  max-width: 560px;
+  width: 100%;
+  height: 315px;
+}
+
 @media (max-width: 991.98px) {
   .nav {
     position: static;
@@ -416,6 +482,40 @@ body.locked {
     width: 100%;
     height: 56vw;
   }
+
+  .turkey-product {
+    padding: 30px 0;
+  }
+
+  .turkey-product::after {
+    content: none;
+  }
+
+  .turkey-product__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    row-gap: 20px;
+  }
+
+  .turkey-product__video {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    width: calc(100% + 40px);
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  .turkey-product__video-iframe {
+    max-width: 100%;
+    height: 56vw;
+  }
 }
 
 @media (max-width: 991.98px) and (max-width: 479.98px) {
@@ -461,9 +561,17 @@ body.locked {
   .presentation {
     padding: 15px 0;
   }
+
+  .turkey-product {
+    padding: 15px 0;
+  }
 }
 
 @media (max-width: 479.98px) {
+  .title {
+    font-size: 32px;
+  }
+
   .nav {
     padding: 25px 0;
   }
