@@ -1,24 +1,43 @@
 .reviews {
+  position: relative;
+  padding: 45px 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 3px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #2c84d2;
+    opacity: 0.5;
+  }
+
+  @media (max-width: $breakpoint992) {
+    padding: 50px 0;
+  }
 
   // .reviews__inner
 
-  &__inner {
-  }
+  &__inner {}
 
   // .reviews__title
 
   &__title {
+    text-align: center;
+    font-size: 43px;
   }
 
   // .reviews__slider-container
 
-  &__slider-container {
-  }
+  &__slider-container {}
 
   // .reviews__slider-wrapper
 
-  &__slider-wrapper {
-  }
+  &__slider-wrapper {}
 
   // .reviews__slider
 
@@ -27,9 +46,14 @@
     display: flex;
     justify-content: center;
     height: auto;
-    
-    &:hover{
-      .reviews__slider-play svg {
+
+    &:hover {
+      .reviews__slider-img::after{
+        transform: scale(1.2);
+        transition: transform 0.3s ease 0s;
+      }
+
+      .reviews__slider-img::before{
         transform: scale(1.2);
         transition: transform 0.3s ease 0s;
       }
@@ -48,16 +72,52 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
+    display: none;
   }
 
   // .reviews__slider-img
 
   &__slider-img {
+    position: relative;
+
     img {
       max-width: 660px;
       width: 100%;
       height: auto;
     }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #2ad167;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 10px;
+      height: 10px;
+      border-style: solid;
+      border-width: 5px 0 5px 10px;
+      border-color: transparent transparent transparent #ffffff;
+      z-index: 2;
+    }
+
   }
 
   // .reviews__slider-video
@@ -77,9 +137,8 @@
   }
 }
 
-.swiper-button-next {
-}
-.swiper-button-prev {
-}
-.swiper-pagination {
-}
+.swiper-button-next {}
+
+.swiper-button-prev {}
+
+.swiper-pagination {}
