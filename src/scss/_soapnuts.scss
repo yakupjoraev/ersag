@@ -1,0 +1,89 @@
+.soapnuts {
+  position: relative;
+  padding: 45px 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 3px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #2c84d2;
+    opacity: 0.5;
+  }
+
+  @media (max-width: $breakpoint992) {
+    padding: 50px 0;
+  }
+
+  // .soapnuts__inner
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      row-gap: 20px;
+    }
+  }
+
+  // .soapnuts__img
+
+  &__img {
+    flex: 0 1 560px;
+    margin: auto 0;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+  }
+
+  // .soapnuts__info
+
+  &__info {
+    flex: 0 1 560px;
+
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+  }
+
+  // .soapnuts__title
+
+  &__title {}
+
+  // .soapnuts__desc
+
+  &__desc {
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 300;
+    color: #000000;
+    opacity: .85;
+
+    span {
+      font-weight: 600;
+      color: rgb(12, 132, 210);
+      opacity: 1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
